@@ -10,20 +10,17 @@ def mergeIdiomsByRule(rule, dictionary):
     For each idiom list in the given dictionary, merge all idioms failing the
     rule into one.
     '''
-    with tqdm(total=len(dictionary), desc='Merging idioms by rule') as pbar:
-        for key, this_idioms in dictionary.items():
-            pbar.update()
-            _ = map(rule, this_idioms)  # TODO: Is this needed?
-            # Collect idioms based on test result.
-            failed_idioms = []
-            passed_idioms = []
-            for idiom in this_idioms:
-                (passed_idioms if rule(idiom) else failed_idioms).append(idiom)
-            # Update the entry to be the list connecting idioms extended with
-            # a combined idiom.
-            if len(failed_idioms) > 0:
-                dictionary[key] = passed_idioms
-                dictionary[key].append('\n'.join(failed_idioms))
+    for key, this_idioms in dictionary.items():
+        # Collect idioms based on test result.
+        failed_idioms = []
+        passed_idioms = []
+        for idiom in this_idioms:
+            (passed_idioms if rule(idiom) else failed_idioms).append(idiom)
+        # Update the entry to be the list connecting idioms extended with
+        # a combined idiom.
+        if len(failed_idioms) > 0:
+            dictionary[key] = passed_idioms
+            dictionary[key].append('\n'.join(failed_idioms))
 
 
 if __name__ == "__main__":
@@ -60,5 +57,6 @@ if __name__ == "__main__":
                     g.node(key, shape='circle')
                     g.edge(ending_idiom, key)
                     g.edge(key, starting_idiom)
-
+    print('Rendering...')
     g.render()
+    print('Done!')

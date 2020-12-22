@@ -1,10 +1,23 @@
+"""IdiomGraph-gv: Draw a graph of Chinese four-character idioms.
+
+Usage:
+  main.py (-h | --help)
+  main.py --version
+  main.py generate [--limit_num_idioms=<n>] [--limit_char_nodes=<c>] [--limit_num_idioms_each_node=<e>]
+
+Options:
+  -h --help                         Show this screen.
+  --version                         Show version.
+  --limit_num_idioms=<n>            Max number of idioms to consider [default: 2000]. Disable sub-sampling by setting this with a non-positive value.
+  --limit_char_nodes=<c>            Only use the top X frequently used character-nodes [default: -1].
+  --limit_num_idioms_each_node=<e>  Max number of idioms to display at each idiom-node [default: 10].
+
+"""
+from docopt import docopt
 from collections import defaultdict
 from graphviz import Digraph
 from tqdm import tqdm
 from random import sample
-
-N = 2000  # Max number of idioms to consider.
-TRUNCATE_DICT_FOR_TOP_LEN = False  # TODO: This does not work as intended yet.
 
 
 def mergeIdiomsByRule(rule, dictionary, limit=10):
@@ -47,6 +60,7 @@ def truncateDictForTopLen(dictionary, n=7):
 
 
 if __name__ == "__main__":
+    arguments = docopt(__doc__, version='IdiomGraph-gv 1.0')
     with open('idioms.txt', 'r') as file:
         # Remove new lines.
         idioms = map(lambda x: x.strip(), file)
@@ -57,8 +71,9 @@ if __name__ == "__main__":
         idioms = list(set(idioms))
 
     print(f'A total of {len(idioms)} idioms are loaded.')
-    if N > 0:  # Disable sub-sampling by setting N with a non-positive number.
-        idioms = sample(idioms, N)
+    n = int(arguments['--limit_num_idioms'])
+    if n > 0:
+        idioms = sample(idioms, n)
         print(f'A total of {len(idioms)} idioms are sampled.')
 
     # Build dictionaries from first (last) characters to list of idioms that
@@ -70,13 +85,19 @@ if __name__ == "__main__":
         endings[idiom[-1]].append(idiom)
 
     mergeIdiomsByRule(
-        rule=lambda idiom: idiom[0] in endings, dictionary=endings)
+        rule=lambda idiom: idiom[0] in endings,
+        dictionary=endings,
+        limit=int(arguments['--limit_num_idioms_each_node']),
+    )
     mergeIdiomsByRule(
-        rule=lambda idiom: idiom[-1] in beginnings, dictionary=beginnings)
+        rule=lambda idiom: idiom[-1] in beginnings,
+        dictionary=beginnings,
+        limit=int(arguments['--limit_num_idioms_each_node']),
+    )
     print(f'A total of {len(beginnings)} first-characters are processed.')
     print(f'A total of {len(endings)} forth-characters are processed.')
 
-    if TRUNCATE_DICT_FOR_TOP_LEN:
+    if int(arguments['--limit_char_nodes']) > 0:
         beginnings = truncateDictForTopLen(beginnings)
         endings = truncateDictForTopLen(endings)
         print(f'A total of {len(beginnings)} first-characters remained.')

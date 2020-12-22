@@ -3,7 +3,8 @@
 # platform: osx-64
 ca-certificates=2020.12.8=hecd8cb5_0
 cairo=1.14.12=he60d9cb_2
-certifi=2020.12.5=py39hecd8cb5_0
+certifi=2020.12.5=py38hecd8cb5_0
+docopt=0.6.2=py38_0
 expat=2.2.10=hb1e8313_2
 fontconfig=2.12.6=h9850fc5_0
 freetype=2.8=h12048fb_1
@@ -27,12 +28,12 @@ ncurses=6.2=h0a44026_1
 openssl=1.1.1i=h9ed2024_0
 pango=1.42.0=h0f8274a_0
 pcre=8.44=hb1e8313_0
-pip=20.3.3=py39hecd8cb5_0
+pip=20.3.3=py38hecd8cb5_0
 pixman=0.40.0=haf1e3a3_0
-python=3.9.1=h88f2d9e_2
+python=3.8.5=h26836e1_1
 python-graphviz=0.15=pyhd3eb1b0_0
 readline=8.0=h1de35cc_0
-setuptools=51.0.0=py39hecd8cb5_2
+setuptools=51.0.0=py38hecd8cb5_2
 sqlite=3.33.0=hffcf06c_0
 tk=8.6.10=hb0a8c7a_0
 tqdm=4.54.1=pyhd3eb1b0_0

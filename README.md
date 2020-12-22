@@ -22,7 +22,7 @@ curl https://raw.githubusercontent.com/fighting41love/funNLP/master/data/%E6%88%
 3. Run the main script:
 
 ```shell
-python main.py
+python main.py generate
 ```
 
 ## References

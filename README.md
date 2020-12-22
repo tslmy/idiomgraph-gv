@@ -4,6 +4,8 @@
 
 成语接龙表。使用`graphviz`实现。
 
+![demo](https://s2.gifyu.com/images/ezgif.com-gif-maker52af45332a9ca67f.gif)
+
 ## Usage
 
 1. Create a conda environment with the required packages:

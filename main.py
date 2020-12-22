@@ -28,13 +28,13 @@ def mergeIdiomsByRule(rule, dictionary):
 
 if __name__ == "__main__":
     with open('idioms.txt', 'r') as file:
-        # Load lines and remove new lines.
+        # Remove new lines.
         idioms = map(lambda x: x.strip(), file)
-
-    # Filter for 4-letter idioms only.
-    idioms = filter(lambda x: len(x) == 4, idioms)
-    # Make sure that there's not repetitions.
-    idioms = set(idioms)
+        # Filter for 4-letter idioms only.
+        idioms = filter(lambda x: len(x) == 4, idioms)
+        # Make sure that there's not repetitions. Due to lazy evaluation, this
+        # is the first time a line will be read from the file.
+        idioms = set(idioms)
     # Only take the first N idioms.
     idioms = list(idioms)[:N]
 

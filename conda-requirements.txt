@@ -35,6 +35,7 @@ readline=8.0=h1de35cc_0
 setuptools=51.0.0=py39hecd8cb5_2
 sqlite=3.33.0=hffcf06c_0
 tk=8.6.10=hb0a8c7a_0
+tqdm=4.54.1=pyhd3eb1b0_0
 tzdata=2020d=h14c3975_0
 wheel=0.36.2=pyhd3eb1b0_0
 xz=5.2.5=h1de35cc_0

@@ -4,7 +4,7 @@
 
 成语接龙表。使用`graphviz`实现。
 
-![demo](https://s2.gifyu.com/images/ezgif.com-gif-maker52af45332a9ca67f.gif)
+![demo](https://i.imgur.com/OD3RQ9P.png)
 
 ## Usage
 

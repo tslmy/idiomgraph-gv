@@ -1,0 +1,42 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-64
+ca-certificates=2020.12.8=hecd8cb5_0
+cairo=1.14.12=he60d9cb_2
+certifi=2020.12.5=py39hecd8cb5_0
+expat=2.2.10=hb1e8313_2
+fontconfig=2.12.6=h9850fc5_0
+freetype=2.8=h12048fb_1
+fribidi=1.0.10=haf1e3a3_0
+gettext=0.19.8.1=hb0f4f8b_2
+glib=2.66.1=h9bbe63b_0
+graphite2=1.3.14=h38d11af_0
+graphviz=2.40.1=h0a44026_0
+harfbuzz=1.7.6=h171471c_1
+icu=58.2=h0a44026_3
+jpeg=9b=he5867d9_2
+libcxx=10.0.0=1
+libedit=3.1.20191231=h1de35cc_1
+libffi=3.3=hb1e8313_2
+libiconv=1.16=h1de35cc_0
+libpng=1.6.37=ha441bb4_0
+libtiff=4.1.0=hcb84e12_1
+libxml2=2.9.10=h7cdb67c_3
+lz4-c=1.9.2=h79c402e_3
+ncurses=6.2=h0a44026_1
+openssl=1.1.1i=h9ed2024_0
+pango=1.42.0=h0f8274a_0
+pcre=8.44=hb1e8313_0
+pip=20.3.3=py39hecd8cb5_0
+pixman=0.40.0=haf1e3a3_0
+python=3.9.1=h88f2d9e_2
+python-graphviz=0.15=pyhd3eb1b0_0
+readline=8.0=h1de35cc_0
+setuptools=51.0.0=py39hecd8cb5_2
+sqlite=3.33.0=hffcf06c_0
+tk=8.6.10=hb0a8c7a_0
+tzdata=2020d=h14c3975_0
+wheel=0.36.2=pyhd3eb1b0_0
+xz=5.2.5=h1de35cc_0
+zlib=1.2.11=h1de35cc_3
+zstd=1.4.5=h41d2c2f_0

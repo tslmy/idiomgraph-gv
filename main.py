@@ -97,9 +97,10 @@ if __name__ == "__main__":
     print(f'A total of {len(beginnings)} first-characters are processed.')
     print(f'A total of {len(endings)} forth-characters are processed.')
 
-    if int(arguments['--limit_char_nodes']) > 0:
-        beginnings = truncateDictForTopLen(beginnings)
-        endings = truncateDictForTopLen(endings)
+    n = int(arguments['--limit_char_nodes'])
+    if n > 0:
+        beginnings = truncateDictForTopLen(beginnings, n)
+        endings = truncateDictForTopLen(endings, n)
         print(f'A total of {len(beginnings)} first-characters remained.')
         print(f'A total of {len(endings)} forth-characters remained.')
 

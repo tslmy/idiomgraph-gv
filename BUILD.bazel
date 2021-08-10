@@ -1,0 +1,18 @@
+# Load pip requirement rules, which are converted into bazel rules in the WORKSPACE file.
+load("@pip//:requirements.bzl", "requirement")
+
+# This is not yet working, because it cannot find the graphviz binary.
+py_binary(
+    # To run this target, use `bazel run :main`.
+    name="main",
+    srcs=["main.py"],
+    data=["//:idioms.txt"],
+    deps=[
+        # Demand dependencies here.
+        requirement("docopt"),
+        requirement("graphviz"),
+        requirement("tqdm"),
+    ],
+)
+
+# TODO: How to define the Python interpreter version?

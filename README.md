@@ -1,6 +1,7 @@
 # 成语接龙图生成器 IdiomGraph-gv
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/43c10a8a5a434bb29eb0ef55126658ef)](https://www.codacy.com/gh/tslmy/idiomgraph-gv/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tslmy/idiomgraph-gv&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/856f73a2eb285191db93/maintainability)](https://codeclimate.com/github/tslmy/idiomgraph-gv/maintainability)
 
 A program that generates a look-up chart for the game Chinese Idiom Solitaire.
 

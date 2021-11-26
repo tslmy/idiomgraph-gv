@@ -1,5 +1,7 @@
 # 成语接龙图生成器 IdiomGraph-gv
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6da685fbbeb94f469b0dab97ef0aa0f0)](https://app.codacy.com/gh/tslmy/idiomgraph-gv?utm_source=github.com&utm_medium=referral&utm_content=tslmy/idiomgraph-gv&utm_campaign=Badge_Grade_Settings)
+
 A program that generates a look-up chart for the game Chinese Idiom Solitaire.
 
 Idiom Solitaire is a classic game among Chinese speakers. In this game, players take turns to come up with an four-character idiom that starts with the last (forth) character of the last player's idiom. This first player that fails to come up with one loses (and have to take a shot of spirit -- at least this was how I learned the game when I was 8 years old).

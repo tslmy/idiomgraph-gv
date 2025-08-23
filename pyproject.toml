@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idiomgraph-gv"
+version = "1.0.0"
+description = "A program that generates a look-up chart for the game Chinese Idiom Solitaire"
+readme = "README.md"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    {name = "tslmy"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "docopt==0.6.2",
+    "graphviz==0.15",
+    "tqdm==4.54.1",
+]
+
+[project.scripts]
+idiomgraph-gv = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/tslmy/idiomgraph-gv"
+Repository = "https://github.com/tslmy/idiomgraph-gv"
+Issues = "https://github.com/tslmy/idiomgraph-gv/issues"
+
+[tool.uv]
+dev-dependencies = []

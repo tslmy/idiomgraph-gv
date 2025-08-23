@@ -2,6 +2,11 @@ idioms.gv
 idioms.gv.pdf
 idioms.txt
 
+# Generated graph files (case variations)
+Idioms.gv
+Idioms.gv.pdf
+Idioms
+
 # Created by https://www.toptal.com/developers/gitignore/api/python,bazel
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,bazel
 

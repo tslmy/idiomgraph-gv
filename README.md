@@ -3,6 +3,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/43c10a8a5a434bb29eb0ef55126658ef)](https://www.codacy.com/gh/tslmy/idiomgraph-gv/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tslmy/idiomgraph-gv&amp;utm_campaign=Badge_Grade)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/tslmy/idiomgraph-gv.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tslmy/idiomgraph-gv/alerts/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/856f73a2eb285191db93/maintainability)](https://codeclimate.com/github/tslmy/idiomgraph-gv/maintainability)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![HitCount](http://hits.dwyl.com/tslmy/idiomgraph-gv.svg?style=flat)](http://hits.dwyl.com/tslmy/idiomgraph-gv)
 
 A program that generates a look-up chart for the game Chinese Idiom Solitaire.
@@ -54,10 +55,10 @@ uv run python main.py generate
 
 ### Legacy Conda setup
 
-For existing conda users, you can still use the conda environment, though uv is now recommended:
+For existing conda users, you can still create a conda environment manually, though uv is now recommended:
 
 ```shell
-conda create --name idiom --file conda-requirements.txt
+conda create --name idiom python=3.8 python-graphviz tqdm
 conda activate idiom
 ```
 

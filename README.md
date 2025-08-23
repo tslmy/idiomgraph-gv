@@ -52,25 +52,6 @@ curl https://raw.githubusercontent.com/fighting41love/funNLP/master/data/%E6%88%
 uv run python main.py generate
 ```
 
-### Alternative setup with pip
-
-If you prefer using traditional pip:
-
-1. Create and activate a virtual environment:
-
-```shell
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-2. Install dependencies:
-
-```shell
-pip install -r requirements.txt
-```
-
-3. Follow steps 3-4 from the uv setup above.
-
 ### Legacy Conda setup
 
 For existing conda users, you can still use the conda environment, though uv is now recommended:

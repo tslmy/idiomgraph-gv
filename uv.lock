@@ -1,0 +1,47 @@
+version = 1
+revision = 3
+requires-python = ">=3.8"
+
+[[package]]
+name = "docopt"
+version = "0.6.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491", size = 25901, upload-time = "2014-06-16T11:18:57.406Z" }
+
+[[package]]
+name = "graphviz"
+version = "0.15"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/33/c4/82459071796f59ef218d3c22d43d35aa0fbcf74f9fcce8829672febd7f5e/graphviz-0.15.zip", hash = "sha256:2b85f105024e229ec330fe5067abbe9aa0d7708921a585ecc2bf56000bf5e027", size = 183103, upload-time = "2020-11-15T16:01:16.274Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/64/72/f4f4205db2a58e7a49e8190c0b49e9669d7ecadf6385b5bcdcf910354a6d/graphviz-0.15-py2.py3-none-any.whl", hash = "sha256:403b55553b235875fa521023a06d9c29b46f3a956f960d4e0a5b956bca9eb9ce", size = 18626, upload-time = "2020-11-15T16:01:13.838Z" },
+]
+
+[[package]]
+name = "idiomgraph-gv"
+version = "1.0.0"
+source = { editable = "." }
+dependencies = [
+    { name = "docopt" },
+    { name = "graphviz" },
+    { name = "tqdm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "docopt", specifier = "==0.6.2" },
+    { name = "graphviz", specifier = "==0.15" },
+    { name = "tqdm", specifier = "==4.54.1" },
+]
+
+[package.metadata.requires-dev]
+dev = []
+
+[[package]]
+name = "tqdm"
+version = "4.54.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/e9/a51c724ce67ff24a18861af5b0c6f9468e4b4ecdbd53fd43a9288b856372/tqdm-4.54.1.tar.gz", hash = "sha256:38b658a3e4ecf9b4f6f8ff75ca16221ae3378b2e175d846b6b33ea3a20852cf5", size = 178633, upload-time = "2020-12-05T03:40:55.715Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/54/115f0c28a61d56674c3a5e05c46d6c3523ad196e1dcd3e2d8b119026df36/tqdm-4.54.1-py2.py3-none-any.whl", hash = "sha256:d4f413aecb61c9779888c64ddf0c62910ad56dcbe857d8922bb505d4dbff0df1", size = 69745, upload-time = "2020-12-05T03:40:53.119Z" },
+]

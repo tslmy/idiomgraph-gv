@@ -1,3 +1,7 @@
+# DEPRECATED: This project now uses uv for package management.
+# Please use `uv sync` instead of conda for new setups.
+# See README.md for updated setup instructions.
+#
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: osx-64
